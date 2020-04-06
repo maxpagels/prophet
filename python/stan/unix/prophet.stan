@@ -101,12 +101,12 @@ transformed data {
 }
 
 parameters {
-  real k;                       // Base trend growth rate
-  real m;                       // Trend offset
-  vector[S] delta;              // Trend rate adjustments
-  real<lower=0> sigma_obs;      // Observation noise
-  vector[num_unconstrained] beta_unconstrained;
-  vector<lower=0>[num_constrained] beta_constrained;
+  real k;                                             // Base trend growth rate
+  real m;                                             // Trend offset
+  vector[S] delta;                                    // Trend rate adjustments
+  real<lower=0> sigma_obs;                            // Observation noise
+  vector[num_unconstrained] beta_unconstrained;       // Unconstrained coefficients
+  vector<lower=0>[num_constrained] beta_constrained;  // Constrained coefficients
 }
 
 transformed parameters {
